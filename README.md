@@ -18,7 +18,7 @@ you would be able to see the rental processes in action.
 I have chosen the modular monolith architecture as it is easier to build from scratch, easier to maintain
 at the beginning of the process of creating app's prototype and app itself. If needed it is easy to break 
 apart the modules and create microservices out of it enabling better scaling and adding more complexity.
-The architecture's scratch can be seen in ArchitectuteScratch.drawio, it needs to be opened on draw.io website.
+The architecture's scratch can be seen in ArchitectuteScratch.drawio, it needs to be opened on draw.io site.
 
 For the modules and resources seen on the architecture graph I have chosen:
 - Redis for database, as it has basic functionalities for geospatial indexing is fast to read and easy to maintain. The
@@ -28,3 +28,4 @@ further development it would be better to switch to sth more appropriate, like R
 - BFF service being just the service itself, shown on diagram as separate module to increase readability.
 - ClientService that can be found in internal/customer is a temporary file that simulates customers using app, this is
 meant to be deleted once the proper UI is built, so the code is not tested.
+
