@@ -11,20 +11,33 @@ import (
 	"syscall"
 
 	"github.com/gorilla/mux"
+
+	redis "scootinAboot/internal/module/redis/transfer"
+	"scootinAboot/internal/module/rental/transfer"
 )
 
 type Server struct {
-	logger     *log.Logger
-	httpServer *http.Server
-	router     *mux.Router
+	logger        *log.Logger
+	httpServer    *http.Server
+	router        *mux.Router
+	redisService  redis.RedisService
+	rentalService transfer.RentalService
 }
 
-func NewServer(logger *log.Logger, server *http.Server, router *mux.Router) *Server {
+func NewServer(
+	logger *log.Logger,
+	server *http.Server,
+	router *mux.Router,
+	redis redis.RedisService,
+	rental transfer.RentalService,
+) *Server {
 
 	s := &Server{
-		logger:     logger,
-		httpServer: server,
-		router:     router,
+		logger:        logger,
+		httpServer:    server,
+		router:        router,
+		redisService:  redis,
+		rentalService: rental,
 	}
 
 	s.registerRoutes()
