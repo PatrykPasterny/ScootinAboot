@@ -8,7 +8,7 @@ To make it easier just use:
 
 
 ```aqua
-    docker compose up 
+    docker compose up
 ```
 
 
@@ -20,9 +20,9 @@ you would be able to see the rental processes in action.
 
 
 I have chosen the modular monolith architecture as it is easier to build from scratch, easier to maintain
-at the beginning of the process of creating app's prototype and app itself. If needed it is easy to break 
+at the beginning of the process of creating app's prototype and app itself. If needed it is easy to break
 apart the modules and create microservices out of it enabling better scaling and adding more complexity.
-The architecture's scratch can be seen in ArchitectuteScratch.drawio, it needs to be opened on draw.io site.
+The architecture's scratch can be seen in ArchitectureScratch.drawio, it needs to be opened on draw.io site.
 
 
 For the modules and resources seen on the architecture graph I have chosen:
