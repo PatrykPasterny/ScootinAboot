@@ -26,4 +26,5 @@ tradeoff here is that the geospatial functions even though present are not widel
 to handle multiple simultaneous operations using geospatial indexes, but is enough for a prototype app. In case of
 further development it would be better to switch to sth more appropriate, like RedisGears.
 - BFF service being just the service itself, shown on diagram as separate module to increase readability.
-
+- ClientService that can be found in internal/customer is a temporary file that simulates customers using app, this is
+meant to be deleted once the proper UI is built, so the code is not tested.
